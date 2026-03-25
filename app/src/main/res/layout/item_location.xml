@@ -5,30 +5,57 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardCornerRadius="8dp"
+    app:cardCornerRadius="12dp"
     app:cardElevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
 
-        <TextView
-            android:id="@+id/textLocationName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Location Name"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+        <!-- Location icon -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:contentDescription="Location icon"
+            android:layout_marginEnd="12dp" />
 
-        <TextView
-            android:id="@+id/textCoordinates"
-            android:layout_width="wrap_content"
+        <!-- Location details -->
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Lat: 0.0, Lng: 0.0"
-            android:textColor="#757575"
-            android:layout_marginTop="4dp"/>
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textLocationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location Name"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textCoordinates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lat: 0.0, Lng: 0.0"
+                android:textColor="#757575"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Navigate arrow indicator -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_media_play"
+            android:contentDescription="Navigate"
+            android:layout_marginStart="8dp" />
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

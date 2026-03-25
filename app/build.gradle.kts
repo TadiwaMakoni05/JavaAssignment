@@ -56,6 +56,11 @@ dependencies {
     // Google Play Services (Fixes the FusedLocationProviderClient)
     implementation("com.google.android.gms:play-services-location:21.0.1")
 
+    // Google Maps SDK - for embedding the map inside the app
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
 
+    // OkHttp - for making HTTP requests to Google Directions API
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
+    // JSON parsing (org.json is already included with Android, but this is for clarity)
 }

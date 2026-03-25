@@ -26,4 +26,8 @@ public interface LocationDao {
     // --- NEW: Updates an existing location's name in the database ---
     @Update
     void update(LocationEntity location);
+
+    // Synchronous query used by background service to re-register geofences
+    @Query("SELECT * FROM saved_locations")
+    List<LocationEntity> getAllLocationsList();
 }
